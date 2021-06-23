@@ -88,7 +88,7 @@ function Install()
   Welcome;
   #wget --no-check-certificate -qO "/tmp/lotServer.tar" "https://github.com/xidcn/LotServer_Vicer/raw/master/lotServer.tar"
   #tar -xvf "/tmp/lotServer.tar" -C /tmp
-  wget --no-check-certificate -qO "/tmp/lotServer.zip" "https://github.com/xidcn/LotServer_Vicer/raw/master/lotServer.zip"
+  wget --no-check-certificate -qO "/tmp/lotServer.zip" "https://github.com/uxh/LotServer_Vicer/raw/master/lotServer.zip"
   unzip -o -d /tmp/lotServer /tmp/lotServer.zip
   acce_ver=$(acce_check ${KNV})
   wget --no-check-certificate -qO "${AcceTmp}/etc/apx.lic" "https://api.moeclub.org/lotServer?ver=${acce_ver}&mac=${Mac}"

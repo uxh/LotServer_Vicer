@@ -36,9 +36,9 @@ fi
 function dep_check()
 {
   apt-get >/dev/null 2>&1
-  [ $? -le '1' ] && apt-get -y -qq install sed grep gawk ethtool >/dev/null 2>&1
+  [ $? -le '1' ] && apt-get -y -qq install sed grep gawk ethtool unzip >/dev/null 2>&1
   yum >/dev/null 2>&1
-  [ $? -le '1' ] && yum -y -q install sed grep gawk ethtool >/dev/null 2>&1
+  [ $? -le '1' ] && yum -y -q install sed grep gawk ethtool unzip >/dev/null 2>&1
 }
 
 function acce_check()
@@ -86,8 +86,10 @@ function Install()
   wget --no-check-certificate -qO "${AcceTmp}/bin/${AcceBin}" "https://github.com/xidcn/LotServer_Vicer/raw/master/${MyKernel}"
   [ ! -f "${AcceTmp}/bin/${AcceBin}" ] && Uninstall "Download Error! Not Found ${AcceBin}. "
   Welcome;
-  wget --no-check-certificate -qO "/tmp/lotServer.tar" "https://github.com/xidcn/LotServer_Vicer/raw/master/lotServer.tar"
-  tar -xvf "/tmp/lotServer.tar" -C /tmp
+  #wget --no-check-certificate -qO "/tmp/lotServer.tar" "https://github.com/xidcn/LotServer_Vicer/raw/master/lotServer.tar"
+  #tar -xvf "/tmp/lotServer.tar" -C /tmp
+  wget --no-check-certificate -qO "/tmp/lotServer.zip" "https://github.com/xidcn/LotServer_Vicer/raw/master/lotServer.zip"
+  unzip -o -d /tmp/lotServer /tmp/lotServer.zip
   acce_ver=$(acce_check ${KNV})
   wget --no-check-certificate -qO "${AcceTmp}/etc/apx.lic" "https://api.moeclub.org/lotServer?ver=${acce_ver}&mac=${Mac}"
   [ "$(du -b ${AcceTmp}/etc/apx.lic |cut -f1)" -lt '152' ] && Uninstall "Error! I can not generate the Lic for you, Please try again later. "

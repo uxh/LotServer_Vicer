@@ -22,7 +22,6 @@ bash <(wget --no-check-certificate -qO- https://github.com/uxh/LotServer_Vicer/r
 
 ```
 bash <(wget --no-check-certificate -qO- https://github.com/uxh/awesome-linux-tools/raw/master/rskernel.sh)
-
 ```
 
 ## Debian / Unbuntu自动更换内核（运行后需重启）

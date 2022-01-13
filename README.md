@@ -18,10 +18,17 @@ bash <(wget --no-check-certificate -qO- https://github.com/uxh/LotServer_Vicer/r
 bash <(wget --no-check-certificate -qO- https://github.com/uxh/LotServer_Vicer/raw/master/Install.sh) uninstall
 ```
 
+## CentOS自动更换内核（运行后需重启）
+
+```
+bash <(wget --no-check-certificate -qO- https://github.com/uxh/awesome-linux-tools/raw/master/rskernel.sh)
+
+```
+
 ## Debian / Unbuntu自动更换内核（运行后需重启）
 
 ```
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/Debian_Kernel.sh')
+bash <(wget --no-check-certificate -qO- https://github.com/uxh/LotServer_Vicer/raw/master/Debian_Kernel.sh)
 ```
 
 ## 调教手册
